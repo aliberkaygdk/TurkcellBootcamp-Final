@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <item
+        android:title="Home"
+        android:id="@+id/mainFragment"
+        android:icon="@drawable/arrow"/>
+    <item
+        android:title="Profile"
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/arrow"/>
+
+    <item
+        android:title="Categories"
+        android:id="@+id/categoriesFragment"
+        android:icon="@drawable/arrow"/>
+    <item
+        android:title="Likeds"
+        android:id="@+id/likedsFragment"
+        android:icon="@drawable/arrow"/>
+    <item
+        android:title="Orders"
+        android:id="@+id/ordersFragment"
+        android:icon="@drawable/arrow"/>
+    <item
+        android:title="Search"
+        android:id="@+id/searchFragment"
+        android:icon="@drawable/arrow"/>
+    <item
+        android:title="Exit"
+        android:id="@+id/exit"
+        android:icon="@drawable/arrow"/>
+</menu>

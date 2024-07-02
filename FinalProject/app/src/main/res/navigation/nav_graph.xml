@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.aliberkaygedikoglu.finalproject.presentation.fragment.MainFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/mainToDetail"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.aliberkaygedikoglu.finalproject.presentation.fragment.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.aliberkaygedikoglu.finalproject.presentation.fragment.CategoriesFragment"
+        android:label="Categories"
+        tools:layout="@layout/fragment_categories" >
+        <action
+            android:id="@+id/openCategoryProducts"
+            app:destination="@id/categoryProductsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/likedsFragment"
+        android:name="com.aliberkaygedikoglu.finalproject.presentation.fragment.LikedsFragment"
+        android:label="Likeds"
+        tools:layout="@layout/fragment_likeds" >
+        <action
+            android:id="@+id/likedsToDetail"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ordersFragment"
+        android:name="com.aliberkaygedikoglu.finalproject.presentation.fragment.OrdersFragment"
+        android:label="Orders"
+        tools:layout="@layout/fragment_orders" >
+        <action
+            android:id="@+id/orderToMain"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/ordersFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/ordersToDetail"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.aliberkaygedikoglu.finalproject.presentation.fragment.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/searchToDetail"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryProductsFragment"
+        android:name="com.aliberkaygedikoglu.finalproject.presentation.fragment.CategoryProductsFragment"
+        android:label="Category Products"
+        tools:layout="@layout/fragment_category_products" >
+        <action
+            android:id="@+id/catProductToDetail"
+            app:destination="@id/detailFragment" />
+        <argument
+            android:name="categoryProduct"
+            app:argType="com.aliberkaygedikoglu.finalproject.model.Category" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.aliberkaygedikoglu.finalproject.presentation.fragment.DetailFragment"
+        android:label="Product Detail"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="detailProduct"
+            app:argType="com.aliberkaygedikoglu.finalproject.model.Product" />
+    </fragment>
+</navigation>
